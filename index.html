@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventSphere - Plan, Manage & Celebrate Seamlessly</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html">
+                <i class="fa-solid fa-globe"></i> EventSphere
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Event Registration</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="display-3">Welcome to EventSphere</h1>
+            <p class="lead">Plan, Manage & Celebrate Seamlessly. Your one-stop solution for unforgettable events.</p>
+            <a href="events.html" class="btn btn-gradient btn-lg mt-3 shadow">Explore Events <i class="fa-solid fa-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Featured Events Section -->
+    <section id="featured-events" class="container">
+        <h2 class="section-title">Featured Events</h2>
+        <div class="row g-4" id="events-grid">
+            <div class="col-12 text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2 text-muted">Fetching featured events...</p>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="events.html" class="btn btn-outline-primary btn-lg rounded-pill px-4">View All Events</a>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="bg-light" style="background: rgba(74, 0, 224, 0.02) !important;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase tracking-wider">Expertise</h6>
+                <h2 class="display-5 fw-bold">Our Premium Services</h2>
+                <div class="mx-auto" style="width: 80px; height: 4px; background: var(--primary-color); border-radius: 2px;"></div>
+            </div>
+            
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="card glass-card border-0 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Event Planning</h4>
+                        <p class="text-muted">From conceptualization to execution, we handle every detail to ensure your event is a resounding success.</p>
+                        <a href="#" class="text-decoration-none fw-bold small">Learn More <i class="fa-solid fa-chevron-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card glass-card border-0 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Venue Selection</h4>
+                        <p class="text-muted">Access our curated list of exclusive partner venues, perfectly matched to your event's theme and scale.</p>
+                        <a href="#" class="text-decoration-none fw-bold small">Learn More <i class="fa-solid fa-chevron-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card glass-card border-0 p-4 h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Seamless Registration</h4>
+                        <p class="text-muted">Our state-of-the-art registration system ensures a smooth onboarding experience for all your attendees.</p>
+                        <a href="#" class="text-decoration-none fw-bold small">Learn More <i class="fa-solid fa-chevron-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section text-center">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6 stat-item">
+                    <i class="fa-solid fa-calendar-check fa-3x mb-3"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p class="fs-5">Events Hosted</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <i class="fa-solid fa-users fa-3x mb-3"></i>
+                    <h3 class="counter" data-target="15000">0</h3>
+                    <p class="fs-5">Happy Attendees</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <i class="fa-solid fa-building fa-3x mb-3"></i>
+                    <h3 class="counter" data-target="120">0</h3>
+                    <p class="fs-5">Partner Venues</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <i class="fa-solid fa-star fa-3x mb-3"></i>
+                    <h3 class="counter" data-target="4.9">0</h3>
+                    <p class="fs-5">Average Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <img src="images/event_concert.png" alt="Why Choose Us" class="img-fluid rounded-4 shadow-lg">
+            </div>
+            <div class="col-lg-6">
+                <h6 class="text-primary fw-bold text-uppercase">The EventSphere Advantage</h6>
+                <h2 class="display-6 fw-bold mb-4">Why Choose Us for Your Next Big Celebration?</h2>
+                <p class="text-muted mb-4">We combine creative vision with technical excellence to deliver events that are not just managed, but meticulously crafted.</p>
+                
+                <ul class="feature-list">
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0">Experienced Strategy Team</h6>
+                            <small class="text-muted">Over 10 years of experience in managing high-profile global events.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0">Cutting-edge Technology</h6>
+                            <small class="text-muted">Real-time tracking and automated systems for maximum efficiency.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0">End-to-End Support</h6>
+                            <small class="text-muted">Dedicated event managers available 24/7 to handle every requirement.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0">Scalable Solutions</h6>
+                            <small class="text-muted">Whether it's a private party or a 10,000+ attendee concert, we scale effortlessly.</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card glass-card border-0 text-center p-4 h-100">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1" class="testimonial-img shadow">
+                    <div class="text-warning mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fst-italic">"EventSphere made planning our corporate retreat so effortless. The seamless integration of registration and venue management is top-notch."</p>
+                    <h6 class="fw-bold mt-auto">- Sarah Jenkins</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card glass-card border-0 text-center p-4 h-100">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2" class="testimonial-img shadow">
+                    <div class="text-warning mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="fst-italic">"I used EventSphere for my wedding. The dashboard helped me keep track of all RSVPs easily. Highly recommended!"</p>
+                    <h6 class="fw-bold mt-auto">- Mark Thompson</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card glass-card border-0 text-center p-4 h-100">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client 3" class="testimonial-img shadow">
+                    <div class="text-warning mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fst-italic">"The best platform for managing our annual tech seminars. The interface is clean and user-friendly."</p>
+                    <h6 class="fw-bold mt-auto">- Emily Chen</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-md-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="fa-solid fa-globe me-2"></i>EventSphere</h5>
+                    <p>Plan, Manage & Celebrate Seamlessly. Your ultimate platform for organizing and attending the best events.</p>
+                </div>
+                <div class="col-md-4 mb-4 footer-links text-md-center">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="d-block mb-2">Home</a></li>
+                        <li><a href="events.html" class="d-block mb-2">Events</a></li>
+                        <li><a href="register.html" class="d-block mb-2">Register</a></li>
+                        <li><a href="dashboard.html" class="d-block">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 text-md-end">
+                    <h5 class="fw-bold mb-3">Connect With Us</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <p><i class="fa-solid fa-envelope me-2"></i> contact@eventsphere.com</p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.2);">
+            <div class="text-center pb-2">
+                <small>&copy; 2026 EventSphere. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
